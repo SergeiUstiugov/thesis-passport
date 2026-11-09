@@ -1,0 +1,27 @@
+name: microtest
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  microtest:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Rule check (regression + exhaustive + invariants)
+        run: python check_rules.py
+      - name: Mutation check
+        run: python mutation_check.py
+      - name: Show run metadata
+        run: cat results_meta.json

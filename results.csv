@@ -1,0 +1,14 @@
+﻿Кейс,Ожидаемый статус,Полученный статус,Совпадение
+Снижение показателя,confirmed,confirmed,True
+Рост показателя,contradicted,contradicted,True
+Показатель не изменился,contradicted,contradicted,True
+Нет источника,insufficient_data,insufficient_data,True
+Нет значения,insufficient_data,insufficient_data,True
+Компания и группа,not_comparable,not_comparable,True
+Разные определения,not_comparable,not_comparable,True
+Инвестиционная интерпретация,analyst_required,analyst_required,True
+Несколько опор с разными значениями,clarify,clarify,True
+Нет старого значения,insufficient_data,insufficient_data,True
+Интерпретация без источника,analyst_required,analyst_required,True
+Разный периметр и нет значения,insufficient_data,insufficient_data,True
+Несколько опор и разные определения,clarify,clarify,True

@@ -1,0 +1,171 @@
+[
+  {
+    "name": "Снижение показателя",
+    "input": {
+      "interpretation": false,
+      "sources": true,
+      "conflicting": false,
+      "old": 100,
+      "new": 80,
+      "same_scope": true,
+      "same_definition": true
+    },
+    "expected": "confirmed"
+  },
+  {
+    "name": "Рост показателя",
+    "input": {
+      "interpretation": false,
+      "sources": true,
+      "conflicting": false,
+      "old": 100,
+      "new": 120,
+      "same_scope": true,
+      "same_definition": true
+    },
+    "expected": "contradicted"
+  },
+  {
+    "name": "Показатель не изменился",
+    "input": {
+      "interpretation": false,
+      "sources": true,
+      "conflicting": false,
+      "old": 100,
+      "new": 100,
+      "same_scope": true,
+      "same_definition": true
+    },
+    "expected": "contradicted"
+  },
+  {
+    "name": "Нет источника",
+    "input": {
+      "interpretation": false,
+      "sources": false,
+      "conflicting": false,
+      "old": 100,
+      "new": 80,
+      "same_scope": true,
+      "same_definition": true
+    },
+    "expected": "insufficient_data"
+  },
+  {
+    "name": "Нет значения",
+    "input": {
+      "interpretation": false,
+      "sources": true,
+      "conflicting": false,
+      "old": 100,
+      "new": null,
+      "same_scope": true,
+      "same_definition": true
+    },
+    "expected": "insufficient_data"
+  },
+  {
+    "name": "Компания и группа",
+    "input": {
+      "interpretation": false,
+      "sources": true,
+      "conflicting": false,
+      "old": 100,
+      "new": 80,
+      "same_scope": false,
+      "same_definition": true
+    },
+    "expected": "not_comparable"
+  },
+  {
+    "name": "Разные определения",
+    "input": {
+      "interpretation": false,
+      "sources": true,
+      "conflicting": false,
+      "old": 100,
+      "new": 80,
+      "same_scope": true,
+      "same_definition": false
+    },
+    "expected": "not_comparable"
+  },
+  {
+    "name": "Инвестиционная интерпретация",
+    "input": {
+      "interpretation": true,
+      "sources": true,
+      "conflicting": false,
+      "old": 100,
+      "new": 80,
+      "same_scope": true,
+      "same_definition": true
+    },
+    "expected": "analyst_required"
+  },
+  {
+    "name": "Несколько опор с разными значениями",
+    "input": {
+      "interpretation": false,
+      "sources": true,
+      "conflicting": true,
+      "old": 100,
+      "new": 80,
+      "same_scope": true,
+      "same_definition": true
+    },
+    "expected": "clarify"
+  },
+  {
+    "name": "Нет старого значения",
+    "input": {
+      "interpretation": false,
+      "sources": true,
+      "conflicting": false,
+      "old": null,
+      "new": 80,
+      "same_scope": true,
+      "same_definition": true
+    },
+    "expected": "insufficient_data"
+  },
+  {
+    "name": "Интерпретация без источника",
+    "input": {
+      "interpretation": true,
+      "sources": false,
+      "conflicting": false,
+      "old": 100,
+      "new": 80,
+      "same_scope": true,
+      "same_definition": true
+    },
+    "expected": "analyst_required"
+  },
+  {
+    "name": "Разный периметр и нет значения",
+    "input": {
+      "interpretation": false,
+      "sources": true,
+      "conflicting": false,
+      "old": 100,
+      "new": null,
+      "same_scope": false,
+      "same_definition": true
+    },
+    "expected": "insufficient_data"
+  },
+  {
+    "name": "Несколько опор и разные определения",
+    "input": {
+      "interpretation": false,
+      "sources": true,
+      "conflicting": true,
+      "old": 100,
+      "new": 80,
+      "same_scope": true,
+      "same_definition": false
+    },
+    "expected": "clarify"
+  }
+]

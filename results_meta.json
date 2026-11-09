@@ -1,0 +1,15 @@
+{
+  "run_utc": "2026-11-09T17:40:25Z",
+  "python": "3.12.3",
+  "cases_sha256": "63c2da38559e22ac6a2701510dfaa9fba6570de2c0b6a0b0f632700a631986de",
+  "regression": {
+    "passed": 13,
+    "total": 13
+  },
+  "exhaustive": {
+    "combinations": 256,
+    "mismatches_vs_table": 0,
+    "invariant_violations": 0
+  },
+  "status": "PASS"
+}

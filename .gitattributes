@@ -1,0 +1,5 @@
+# Keep bytes exactly as generated
+* text=auto eol=lf
+*.csv -text
+*.pdf binary
+*.docx binary
